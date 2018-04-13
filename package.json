@@ -4,7 +4,7 @@
   "description": "Pokemon Go Pittsburgh gym dictionary builder",
   "main": "index.js",
   "dependencies": {
-    "PgP-Data": "github:Googer/PgP-Data",
+    "PgP-Data": "github:jspaul93/PgP-Data",
     "he": "^1.1.1"
   },
   "scripts": {
