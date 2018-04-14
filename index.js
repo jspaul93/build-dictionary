@@ -37,7 +37,7 @@ download('https://raw.githubusercontent.com/naptha/tessdata/gh-pages/3.02/eng.tr
 		fs.mkdirSync(path.join(__dirname, './tessdata'));
 	}
 
-	execSync('combine_tessdata -u eng.traineddata ./tessdata/eng.')
+	execSync('\"C:/Program Files (x86)/Tesseract-OCR/combine_tessdata\" -u eng.traineddata ./tessdata/eng.')
 
 	fs.unlinkSync('./eng.traineddata');
 	fs.unlinkSync('./tessdata/eng.bigram-dawg');
@@ -45,9 +45,9 @@ download('https://raw.githubusercontent.com/naptha/tessdata/gh-pages/3.02/eng.tr
 	fs.unlinkSync('./tessdata/eng.freq-dawg');
 	fs.unlinkSync('./tessdata/eng.word-dawg');
 
-	execSync('wordlist2dawg ./eng.user-words ./tessdata/eng.word-dawg ./tessdata/eng.unicharset');
+	execSync('\"C:/Program Files (x86)/Tesseract-OCR/wordlist2dawg\" ./eng.user-words ./tessdata/eng.word-dawg ./tessdata/eng.unicharset');
 
-	execSync('combine_tessdata ./tessdata/eng.')
+	execSync('\"C:/Program Files (x86)/Tesseract-OCR/combine_tessdata" ./tessdata/eng.')
 
 	fs.renameSync('./tessdata/eng.traineddata', './eng.traineddata');
 });
